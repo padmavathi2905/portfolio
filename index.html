@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- Animated background blobs -->
+<div class="bg-blobs">
+  <span></span><span></span><span></span>
+</div>
+
+<!-- put this once after <nav> -->
+<canvas id="cs-bg" aria-hidden="true"></canvas>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">
+  <a href="https://www.csulb.edu/institutional-research-analytics/meet-the-student-assistants-0" target="_blank" rel="noopener noreferrer">
+    Padmavathi Kadium
+  </a>
+</div>
+
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Padmavathi Kadium</div>
+      
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title"> Padmavathi Kadium</a>
+</h1>
+        
+        <p class="section__text__p2">Master's Student & Application Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/kadium-padmavathi-7156a0217/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/padmavathi2905'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Software Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>1. SRM University - Bachelors Degree in Computer Science in AI and ML<br />2. CSU Long Beach - Masters Degree in Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Padmavathi Kadium is a curious coder who turned coding into a full-time hobby and career.
+She builds apps that actually work on both Android and iOS without crying over build errors most days.
+From predicting natural gas prices to creating email systems that talk back, she makes tech feel human.
+Her toolbox includes Python, Java, AWS, Flutter, and just enough coffee to power a data center.
+When she’s not coding, she’s probably publishing research, winning medals, or plotting how to automate life itself.
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    <section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+  <div class="experience-details-container">
+
+    <div class="details-container">
+      <h2 class="experience-sub-title">
+        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+        CSULB Office of Institutional Research & Analytics
+      </h2>
+      <p><strong>Role:</strong> Application Developer</p>
+      <p>
+        April 2025 – Present
+      </p>
+    </div>
+
+    <div class="details-container">
+      <h2 class="experience-sub-title">
+        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+        Evostra Ventures Pvt Ltd
+      </h2>
+      <p><strong>Role:</strong> Web Developer Intern</p>
+      <p>
+        June 2024 - December 2024
+      </p>
+    </div>
+
+    <div class="details-container">
+      <h2 class="experience-sub-title">
+        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+        Next Tech Lab
+      </h2>
+      <p><strong>Role:</strong> Research Developer</p>
+      <p>
+        January 2023 - May 2024
+      </p>
+    </div>
+
+  </div>
+</section>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- Mood App -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/mood-app.png"
+            alt="Mood App screenshot"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Mood App</h2>
+        <p class="project-desc">A smart mood tracker that recommends music based on how you feel.</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/padmavathi2905/Mood-App'"
+          >
+            Github
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Currency Converter -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/currency-converter.png"
+            alt="Currency Converter screenshot"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Currency Converter</h2>
+        <p class="project-desc">
+          Real time currency conversions with historical rate charts.
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/padmavathi2905/Currency-Converter'"
+          >
+            Github
+          </button>
+        </div>
+      </div>
+
+      <!-- Voice-Based Email System -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/voice-email.png"
+            alt="Voice Based Email System screenshot"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Voice Based Email System</h2>
+        <p class="project-desc">
+          Hands free email for visually impaired users to compose, read, and send via voice.
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/padmavathi2905/Voice-Based-Email-System---Blind-people'"
+          >
+            Github
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- More projects on GitHub -->
+  <div class="more-projects">
+    <a href="https://github.com/padmavathi2905?tab=repositories" class="more-link" aria-label="See more projects on GitHub">
+      <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.11-.76.08-.75.08-.75 1.23.09 1.88 1.26 1.88 1.26 1.09 1.86 2.86 1.33 3.56 1.02.11-.8.43-1.33.78-1.64-2.67-.3-5.47-1.34-5.47-5.98 0-1.32.47-2.4 1.25-3.24-.13-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.28-1.56 3.29-1.24 3.29-1.24.67 1.69.26 2.94.13 3.25.78.84 1.25 1.92 1.25 3.24 0 4.66-2.81 5.67-5.49 5.97.44.38.83 1.12.83 2.26v3.35c0 .32.21.69.83.58A12 12 0 0 0 12 .5z"/>
+      </svg>
+      <span>More projects on GitHub</span>
+    </a>
+  </div>
+</section>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:kadiumpadmavathi1@gmail.com">kadiumpadmavathi1@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/kadium-padmavathi-7156a0217/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Padmavathi. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

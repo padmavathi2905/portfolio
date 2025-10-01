@@ -1,0 +1,758 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  border-bottom: 3px solid #ddd; /* light gray line */
+  padding-bottom: 8px;
+}
+/* Center section headings and subtitles */
+section {
+  text-align: center;
+}
+
+section .title {
+  display: inline-block;   /* keeps underline animation nice */
+  margin: 0 auto 20px auto;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(39, 9, 110);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 50vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 44rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 5rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(255, 255, 255);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+.details-container {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.experience-sub-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-sub-title .icon {
+  width: 22px;
+  margin-right: 10px;
+}
+
+.details-container p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.details-container ul {
+  list-style: disc inside; /* keeps bullets aligned */
+  margin: 10px 0 0 15px;
+  padding: 0;
+}
+
+.details-container ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.flashcards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-desc { margin: 8px 12px; color: #444; line-height: 1.5; }
+.project-stack { margin: 0 12px 8px; color: #666; font-size: .95rem; }
+
+.more-projects { display: flex; justify-content: center; margin-top: 18px; }
+.more-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border: 1.5px solid #e5e5e5; border-radius: 999px;
+  text-decoration: none; font-weight: 600; color: #111; background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,.05); transition: transform .15s ease, box-shadow .15s ease;
+}
+.more-link:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+.github-icon { width: 22px; height: 22px; fill: #111; }
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers everything horizontally */
+  justify-content: center;
+  text-align: center;    /* centers the text inside */
+}
+
+.project-title {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.project-desc {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ---------- Global animated gradient background ---------- */
+:root{
+  --bg1:#f7f9ff; --bg2:#eef4ff; --bg3:#f8fbff;
+  --card-shadow: 0 10px 25px rgba(0,0,0,.08);
+  --lift-shadow: 0 16px 35px rgba(0,0,0,.12);
+  --accent:#3b82f6;
+}
+
+html, body{
+  background: linear-gradient(120deg, var(--bg1), var(--bg2), var(--bg3));
+  background-size: 180% 180%;
+  animation: bgShift 18s ease-in-out infinite;
+}
+
+/* reduce motion = no background animation */
+@media (prefers-reduced-motion: reduce){
+  html, body{ animation: none; }
+}
+
+@keyframes bgShift{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+/* ---------- Floating blobs behind content ---------- */
+.bg-blobs{
+  position: fixed; inset: 0; overflow: hidden; z-index: -1;
+  pointer-events: none;
+}
+.bg-blobs span{
+  position: absolute; width: 42vmin; height: 42vmin; 
+  background: radial-gradient(ellipse at 30% 30%, rgba(59,130,246,.22), rgba(59,130,246,0) 60%);
+  filter: blur(12px);
+  border-radius: 50%;
+  animation: floatBlob 22s ease-in-out infinite;
+}
+.bg-blobs span:nth-child(1){ top: -10vmin; left: -8vmin; animation-delay: -2s; }
+.bg-blobs span:nth-child(2){ bottom: -12vmin; right: -10vmin; animation-delay: -8s; }
+.bg-blobs span:nth-child(3){ top: 30%; right: -12vmin; width: 50vmin; height: 50vmin; animation-delay: -14s; }
+
+@keyframes floatBlob{
+  0%,100%{ transform: translateY(0) translateX(0) scale(1); }
+  50%{ transform: translateY(-4vmin) translateX(2vmin) scale(1.06); }
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal{
+  opacity: 0; transform: translateY(22px) scale(.98);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+.reveal.reveal-visible{
+  opacity: 1; transform: translateY(0) scale(1);
+}
+
+/* ---------- Card + button micro-interactions ---------- */
+.details-container, .experience-card{
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.details-container:hover, .experience-card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--lift-shadow);
+}
+
+.btn, .btn.btn-color-2, .project-btn{
+  position: relative; overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover, .project-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.btn:focus-visible, .project-btn:focus-visible{
+  outline: 3px solid color-mix(in oklab, var(--accent) 70%, white);
+  outline-offset: 2px;
+}
+
+/* Optional: animated underline on titles */
+.title{
+  position: relative; display: inline-block;
+}
+.title::after{
+  content:""; position:absolute; left:0; bottom:-8px; height:4px; width:0;
+  background: linear-gradient(90deg, var(--accent), #60a5fa);
+  border-radius: 999px;
+  transition: width .8s cubic-bezier(.2,.8,.2,1);
+}
+section.reveal-visible .title::after{ width: 100%; }
+
+/* Keep project content centered */
+.details-container{
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+
+.article-container{ width:100%; display:flex; justify-content:center; }
+.project-img{ display:block; max-width:100%; border-radius:16px; }
+
+/* --- SCROLL FIX: let content define height --- */
+html, body {
+  min-height: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+
+/* Stop forcing full-viewport sections */
+section {
+  height: auto;          /* was 96vh */
+  min-height: 60vh;      /* optional baseline, remove if you want */
+  padding-top: 6vh;      /* give breathing room */
+}
+
+/* Hero & other sections: remove fixed heights */
+#profile,
+.section-container,
+#contact {
+  height: auto !important;
+  min-height: unset;     /* or set a value if you want a taller hero */
+}
+
+/* Make the projects/experience wrappers grow naturally */
+.experience-details-container,
+.about-containers,
+.article-container {
+  flex-wrap: wrap;       /* already set on some, keep wrapping */
+  align-items: stretch;
+}
+
+/* --- SCROLL FIX: let content define height --- */
+html, body {
+  min-height: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+
+/* Stop forcing full-viewport sections */
+section {
+  height: auto;          /* was 96vh */
+  min-height: 60vh;      /* optional baseline, remove if you want */
+  padding-top: 6vh;      /* give breathing room */
+}
+
+/* Hero & other sections: remove fixed heights */
+#profile,
+.section-container,
+#contact {
+  height: auto !important;
+  min-height: unset;     /* or set a value if you want a taller hero */
+}
+
+/* Make the projects/experience wrappers grow naturally */
+.experience-details-container,
+.about-containers,
+.article-container {
+  flex-wrap: wrap;       /* already set on some, keep wrapping */
+  align-items: stretch;
+}
+
+/* Background canvas stays behind and never blocks scroll */
+#cs-bg,
+.bg-blobs,
+.background-design {
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --- SCROLL FIX: let content define height --- */
+html, body {
+  min-height: 10%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Stop forcing full-viewport sections */
+section {
+  height: auto;          /* was 96vh */
+  min-height: 90vh;      /* optional baseline, remove if you want */
+  padding-top: 20vh;      /* give breathing room */
+}
+
+/* Hero & other sections: remove fixed heights */
+#profile,
+.section-container,
+#contact {
+  height: auto !important;
+  min-height: unset;     /* or set a value if you want a taller hero */
+}
+
+/* Make the projects/experience wrappers grow naturally */
+.experience-details-container,
+.about-containers,
+.article-container {
+  flex-wrap: wrap;       /* already set on some, keep wrapping */
+  align-items: stretch;
+}
+
+/* Background canvas stays behind and never blocks scroll */
+#cs-bg,
+.bg-blobs,
+.background-design {
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* full-screen background canvas behind everything */
+#cs-bg{
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
